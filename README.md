@@ -1,2 +1,3 @@
 # github-project-exporter
- Export GitHub Projects
+
+A tool to export github v2 projects
