@@ -19,33 +19,33 @@
 #### NPM
 
 ```shell
-npx gpe --project https://github.com/users/MuhAssar/projects/2 --output project.json
+npx github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.json
 # or
-npx gpe --project https://github.com/users/MuhAssar/projects/2 --output project.csv
+npx github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.csv
 ```
 
 #### Yarn
 
 ```shell
-yarn gpe --project https://github.com/users/MuhAssar/projects/2 --output project.json
+yarn github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.json
 # or
-yarn gpe --project https://github.com/users/MuhAssar/projects/2 --output project.csv
+yarn github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.csv
 ```
 
 #### PNPM
 
 ```shell
-pnpm gpe --project https://github.com/users/MuhAssar/projects/2 --output project.json
+pnpm github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.json
 # or
-pnpm gpe --project https://github.com/users/MuhAssar/projects/2 --output project.csv
+pnpm github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.csv
 ```
 
 #### Bun
 
 ```shell
-bunx gpe --project https://github.com/users/MuhAssar/projects/2 --output project.json
+bunx github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.json
 # or
-bunx gpe --project https://github.com/users/MuhAssar/projects/2 --output project.csv
+bunx github-project-exporter --project https://github.com/users/MuhAssar/projects/2 --output project.csv
 ```
 
 ### With Install
