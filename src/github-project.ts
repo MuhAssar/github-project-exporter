@@ -1,10 +1,11 @@
-import { GithubQuery } from "./github-query";
+import * as fs from "fs/promises";
+import { GithubQuery } from "./github-query.js";
 import type {
   GithubProjectData,
   GithubProjectItemResult,
   GithubProjectItemResultCollection,
-} from "./models";
-import { GithubProjectItem } from "./github-project-item";
+} from "./models.js";
+import { GithubProjectItem } from "./github-project-item.js";
 import { createObjectCsvWriter } from "csv-writer";
 
 export class GithubProject extends GithubQuery {
@@ -57,12 +58,17 @@ export class GithubProject extends GithubQuery {
                   ... on DraftIssue {
                     title
                     body
+                    createdAt
+                    updatedAt
                   }
                   ...on Issue {
                     title
                     body
                     number
                     url
+                    createdAt
+                    updatedAt
+                    closed
                     labels(first: 20) {
                       nodes {
                         name
@@ -194,6 +200,14 @@ export class GithubProject extends GithubQuery {
       result?.data?.organization?.projectV2?.id ||
       result?.data?.user?.projectV2?.id
     );
+  }
+
+  public async exportToJson(items: GithubProjectItem[], output: string) {
+    try {
+      await fs.writeFile(output, JSON.stringify(items, null, 2), "utf8");
+    } catch (error) {
+      console.error("Error writing to file:", error);
+    }
   }
 
   public async exportToCsv(

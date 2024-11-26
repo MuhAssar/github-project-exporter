@@ -1,4 +1,4 @@
-import type { GithubProjectItemResult } from "./models";
+import type { GithubProjectItemResult } from "./models.js";
 
 export class GithubProjectItem {
   constructor(private result?: GithubProjectItemResult) {
@@ -16,6 +16,14 @@ export class GithubProjectItem {
 
   get url(): string | undefined {
     return this.result?.content?.url;
+  }
+
+  get createdAt(): string | undefined {
+    return this.result?.content?.createdAt;
+  }
+
+  get updatedAt(): string | undefined {
+    return this.result?.content?.updatedAt;
   }
 
   get title(): string | undefined {
@@ -46,6 +54,8 @@ export class GithubProjectItem {
       title: this.title,
       body: this.body,
       url: this.url,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt,
       labels: this.labels,
     };
   }

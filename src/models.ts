@@ -16,6 +16,8 @@ export type GithubProjectItemResult = {
     number?: number;
     url?: string;
     body?: string;
+    updatedAt?: string;
+    createdAt?: string;
     labels?: {
       nodes?: { name: string }[];
     };
