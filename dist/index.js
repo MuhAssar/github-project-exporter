@@ -20,7 +20,7 @@ function main() {
         // Ensure Node.js version compatibility
         const NODE_VERSION = parseFloat(process.version.slice(1));
         if (NODE_VERSION < 16.0) {
-            console.error("\nThis script requires Node.js version 18.0 or higher.\n");
+            console.error("\nThis script requires Node.js version 16.0 or higher.\n");
             console.error("Please update Node.js or use a compatible version.");
             process.exit(1);
         }

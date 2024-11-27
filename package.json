@@ -1,7 +1,7 @@
 {
   "name": "github-project-exporter",
   "description": "A tool to export github projects",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Muhammad Assar <m.assar@outlook.com>",
   "license": "MIT",
   "keywords": [
@@ -25,8 +25,9 @@
     "gpe": "./dist/index.js"
   },
   "scripts": {
+    "start": "node ./dist/index.js",
     "build": "tsc -p ./tsconfig.json",
-    "start": "node ./dist/index.js"
+    "publish": "npm publish"
   },
   "devDependencies": {
     "@types/node": "^22.9.3",
